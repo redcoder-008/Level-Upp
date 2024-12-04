@@ -1,4 +1,5 @@
 public class Q7 {
+    //write a function to check the first occurence of an element in an array
     public static int lastOccurence(int arr[],int i,int tar)
     {
         if(i==arr.length-1) return -1;
@@ -10,3 +11,4 @@ public class Q7 {
         System.out.println(lastOccurence(arr, 0, 6));
     }
 }
+
