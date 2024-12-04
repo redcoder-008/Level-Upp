@@ -11,4 +11,5 @@ public class Q7 {
         System.out.println(lastOccurence(arr, 0, 6));
     }
 }
+//karan
 
