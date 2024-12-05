@@ -1,5 +1,6 @@
 public class Q11
 {
+    //tiling problem approach
     public static int tilingproblem(int n)
     {
         if(n==1 || n==0) return 1;
