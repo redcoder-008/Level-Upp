@@ -5,6 +5,7 @@ public class Q13 {
         int fnm1= friendsPairing(n-1);
         int fnm2= friendsPairing(n-2);
         int pairways= (n-1) * fnm2;
+        System.out.println("helllo");
         return fnm1 + pairways;
       //  return friendsPairing(n-1) + friendsPairing(n-2) * (n-1);
     }
