@@ -13,7 +13,7 @@ public class Q14 {
         }
     }
     public static void main(String[] args) {
-        PrintBinaryString(4, 0, " ");
+        PrintBinaryString(3, 0, " ");
        
     }
     
