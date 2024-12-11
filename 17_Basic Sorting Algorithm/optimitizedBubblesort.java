@@ -26,7 +26,7 @@ public static void printArray(int arr[])
     System.out.println();
 }
 public static void main(String[] args) {
-    int arr[]={2,1,5,3,7,2,7};
+    int arr[]={1,2,3,5,3,7,2,7};
     sort(arr);
     printArray(arr);
 
