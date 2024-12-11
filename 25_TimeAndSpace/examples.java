@@ -6,8 +6,17 @@ public class examples{
             //some constant work is done here
         }
             TC: O(n)
-            */ 
-            
+            */  int n=5;
+            //break
+            for(int i=0;i<n;i++) //Tc: O(N^2)
+            {
+                 for(int j= i+1;j<n;j++)
+                 {
+                    //some constant work is done ....
+                 }
+            }
+            //break
+
 
     }
 }
