@@ -16,6 +16,12 @@ public class examples{
                  }
             }
             //break
+            for(int l=0;l<n;l++) //Tc :   O(n^2)
+            {
+                for(int k=0;k<l;k++){
+
+                }
+            }
 
 
     }
