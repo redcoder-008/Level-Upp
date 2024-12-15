@@ -17,5 +17,6 @@ public class Permutation {
     public static void main(String[] args) {
         String str= "abc";
         FindPermutation("XYZ", "");
+        System.out.println(2==1);
     }
 }
