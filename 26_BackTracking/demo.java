@@ -9,6 +9,7 @@ public class demo {
             }
             System.out.println(newnum);
             if(x == newnum) return true;
+            if(x == newnum) return true;
             else return false;
 
             
