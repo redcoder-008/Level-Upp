@@ -62,6 +62,7 @@ public class NQueens {
                 board[i][j]= "x";
             }
         }
+        //N Queens problem
         PlaceQueen(board, 0, n);
        
     }
