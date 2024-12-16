@@ -14,6 +14,7 @@ public class Subsets {
         printSubsets(str, ans+str.charAt(i), i+1);
         //if No 
         printSubsets(str, ans, i+1);
+        //subset
     }public static void main(String[] args) {
         String str = "XYZ";
         printSubsets(str, "", 0);
