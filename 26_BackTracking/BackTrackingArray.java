@@ -9,6 +9,7 @@ public class BackTrackingArray{
         bcktrack(arr, i+1, 1);
         arr[i]= arr[i]-2;
     }
+    //wrong code
     public static void main(String[] args) {
         int arr[]= new int [5];
         bcktrack(arr, 0, 1);
