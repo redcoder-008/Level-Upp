@@ -1,4 +1,5 @@
 public class LinkList {
+    //basic intro to linkedlist and some function...
     public static class Node {
         int data;
         Node next;
