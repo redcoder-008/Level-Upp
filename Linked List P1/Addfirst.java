@@ -1,3 +1,5 @@
+import java.util.LinkedList;
+
 public class Addfirst{
     public static class Node{
         int data;
@@ -23,8 +25,14 @@ public class Addfirst{
         newNode.next = head; //linking
         //step 3  head = new Node
         head = newNode;
+}
+    public static void main(String[] args) {
+        LinkedList ll = new LinkedList();
+        ll.addFirst(1);
+        ll.addFirst(2);
+        ///add last
+        ll.addLast(3);
+        ll.addLast(4);
 
-
-      
     }
 }
