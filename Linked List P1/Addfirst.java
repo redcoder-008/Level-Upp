@@ -25,7 +25,17 @@ public class Addfirst{
         newNode.next = head; //linking
         //step 3  head = new Node
         head = newNode;
-}
+
+        }
+        public void addLast(int data)
+        {
+            Node newNode = new Node (data);
+            if(head==null)
+            {
+                head = tail= newNode;
+            }
+            tail = newNode;
+        }
     public static void main(String[] args) {
         LinkedList ll = new LinkedList();
         ll.addFirst(1);
