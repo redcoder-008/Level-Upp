@@ -68,21 +68,44 @@ public class LinkList {
             temp.next= newNode;
             size++; 
         }
+        //remove first element
+        public int remove( )
+        {
+            if(size==0)
+            {
+                System.out.println("Linked List is empty ");
+                return Integer.MIN_VALUE;
+            }
+           else  if(size == 1)
+            {
+                int val=head.data;
+                head = tail = null;
+                size--;
+                return val;
+
+            }
+            int val= head.data;
+            head=head.next;
+            size--;
+            return val;
+        }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
 
+            ll.addFirst(2);
             ll.addFirst(1);
+            ll.addLast(3);
+            ll.addLast(5);
+            ll.addMid(3,4);
+      
+   
+
+        
         ll.Print();
-        ll.addFirst(2);
+       // System.out.println(size);
+        ll.remove();
         ll.Print();
-        ll.addLast(3);
-        ll.Print();
-        ll.addLast(4);
-        ll.Print();
-        ll.addMid(2,10);
-        ll.Print();
-        System.out.println(size);
 
     }
 }
