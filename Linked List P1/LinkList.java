@@ -114,6 +114,20 @@ public class LinkList {
             size --;
             return value; 
         }
+        //iterative search in the link list
+        public int itrsearch( int key){
+            Node temp=head;
+            int idx=1;
+            while(temp != null)
+            {
+                if(temp.data == key) return idx;
+                idx++;
+               temp= temp.next;
+
+            }
+            return -1;
+
+        }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
@@ -121,7 +135,7 @@ public class LinkList {
             ll.addFirst(2);
             ll.addFirst(1);
             ll.addLast(3);
-            ll.addLast(5);
+         //   ll.addLast(5);
             ll.addMid(3,4);
       
    
@@ -133,6 +147,8 @@ public class LinkList {
         ll.Print();
         ll.removelast();
         ll.Print();
+        System.out.println("Found at idx : " +ll.itrsearch(3));
+        System.out.println("Found at idx : " +ll.itrsearch(12));
 
     }
 }
