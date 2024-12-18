@@ -128,6 +128,19 @@ public class LinkList {
             return -1;
 
         }
+        //recursive search
+        public int helper(Node head,int key)
+        {
+            if(head == null) return -1;
+            if(head.data == key) return 0;
+            int idx= helper(head.next,key);
+            if(idx == -1 ) return -1;
+            return idx+1;
+        }
+        public int recsearch(int key)
+        {
+            return helper(head,key);
+        }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
@@ -143,12 +156,12 @@ public class LinkList {
         
         ll.Print();
        // System.out.println(size);
-        ll.remove();
-        ll.Print();
-        ll.removelast();
-        ll.Print();
-        System.out.println("Found at idx : " +ll.itrsearch(3));
-        System.out.println("Found at idx : " +ll.itrsearch(12));
+      //  ll.remove();
+      //  ll.Print();
+      // ll.removelast();
+      //  ll.Print();
+        System.out.println("Found at idx : " +ll.recsearch(3));
+        System.out.println("Found at idx : " +ll.recsearch(12));
 
     }
 }
