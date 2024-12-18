@@ -141,6 +141,21 @@ public class LinkList {
         {
             return helper(head,key);
         }
+        //reverse a linked list
+        public void reverse(){
+            Node curr = tail = head;
+            Node prev = null;
+            Node next;
+            while ( curr != null)
+            {
+                next = curr.next;
+                curr.next= prev;
+                prev = curr;
+                curr=next;
+
+            }
+            head= prev;
+        }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
@@ -159,9 +174,10 @@ public class LinkList {
       //  ll.remove();
       //  ll.Print();
       // ll.removelast();
-      //  ll.Print();
-        System.out.println("Found at idx : " +ll.recsearch(3));
-        System.out.println("Found at idx : " +ll.recsearch(12));
-
+      //  System.out.println("Found at idx : " +ll.recsearch(3));
+      //  System.out.println("Found at idx : " +ll.recsearch(12));
+      ll.reverse();
+       ll.Print();
+      
     }
 }
