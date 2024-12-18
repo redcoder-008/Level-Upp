@@ -89,6 +89,31 @@ public class LinkList {
             size--;
             return val;
         }
+        //REMOVE THE LAST ELEMENT OF THE NODE
+        public int removelast()
+        {
+            if(size==0)
+            {
+                System.out.println("Linked list empty");
+                return Integer.MIN_VALUE;
+            }
+            else if (size == 1 )
+            {
+                int value = head.data;
+                head= tail = null;
+                size=0;
+                return value;
+            }
+            Node prev = head;
+            for(int i=0;i<size-2;i++){
+                prev = prev.next;
+            }
+            int value = prev.next.data; //taildata
+            prev.next= null;
+            tail=prev ;
+            size --;
+            return value; 
+        }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
@@ -105,6 +130,8 @@ public class LinkList {
         ll.Print();
        // System.out.println(size);
         ll.remove();
+        ll.Print();
+        ll.removelast();
         ll.Print();
 
     }
