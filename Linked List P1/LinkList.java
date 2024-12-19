@@ -156,6 +156,28 @@ public class LinkList {
             }
             head= prev;
         }
+        //remove the nth node from the end
+        public void delNthNodeFromEnd( int n){
+            int size=0;
+            Node temp= head;
+            while(temp != null){ 
+                temp = temp.next;
+                size++;
+            }
+
+
+            Node prev=head;
+            int i=1;
+            int itofind = size - n;
+            while(i < itofind)
+            {
+                prev = prev.next; //this will find the previous node beforethe nth node
+                i++;
+            }
+            prev.next = prev.next.next; // this will skip the nth node and point to another node
+            return;
+
+        }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
@@ -180,6 +202,8 @@ public class LinkList {
        ll.Print();
        //
        //.llllllllllllllllllllllllllllllllll
+       ll.delNthNodeFromEnd(2);
+       ll.Print();
       
     }
 }
