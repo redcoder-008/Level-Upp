@@ -1,56 +1,57 @@
-import java.lang.classfile.components.ClassPrinter.ListNode;
+// import java.lang.classfile.components.ClassPrinter.ListNode;
+// import java.lang.classfile.components.ClassPrinter.Node;
 
-public class check_palindrome {
+// public class check_palindrome {
     
-class Solution {
-    public boolean isPalindrome(ListNode head)
-    {
-         // finding the mid point 
+
+//     public boolean isPalindrome(Node head)
+//     {
+//          // finding the mid point 
         
-         ListNode slow= head;
-         ListNode fast= head;
+//          Node slow= head;
+//          Node fast= head;
         
-         while(fast!=null && fast.next!=null)
-         {
-               slow= slow.next;
-               fast= fast.next.next;
-         }
+//          while(fast!=null && fast.next!=null)
+//          {
+//                slow= slow.next;
+//                fast= fast.next.next;
+//          }
         
-         ListNode mid= slow;
+//          Node mid= slow;
         
-        // reverse the linkedlist starting from mid till the end
+//         // reverse the linkedlist starting from mid till the end
         
-         ListNode curr= mid;
-         ListNode prev= null;
+//          Node curr= mid;
+//          Node prev= null;
         
-         while( curr!=null )
-         {
-             ListNode ne = curr.next;
+//          while( curr!=null )
+//          {
+//              Node ne = curr.next;
              
-             curr.next= prev;
+//              curr.next= prev;
              
-             prev= curr;
-             curr= ne;
-         }
+//              prev= curr;
+//              curr= ne;
+//          }
         
-         curr = head;
+//          curr = head;
         
-          while( prev!= null)
-          {
-                if( curr.val != prev.val )
-                {
-                     return false;
-                }
-              else
-              {
-                   curr= curr.next;
-                   prev= prev.next;
-              }
-          }
+//           while( prev!= null)
+//           {
+//                 if( curr.val != prev.val )
+//                 {
+//                      return false;
+//                 }
+//               else
+//               {
+//                    curr= curr.next;
+//                    prev= prev.next;
+//               }
+//           }
         
-        return true;
-    }
-}
+//         return true;
+//     }
+// }
 
 
 
@@ -62,4 +63,4 @@ class Solution {
 
     
     
-}
+// }

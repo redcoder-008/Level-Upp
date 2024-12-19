@@ -1,4 +1,5 @@
-import java.lang.classfile.components.ClassPrinter.ListNode;
+
+//package linkedlistp1;
 
 public class LinkList {
     //basic intro to linkedlist and some function...
