@@ -1,3 +1,5 @@
+import java.lang.classfile.components.ClassPrinter.ListNode;
+
 public class LinkList {
     //basic intro to linkedlist and some function...
     public static class Node {
@@ -178,15 +180,57 @@ public class LinkList {
             return;
 
         }
+        //check for palindrome 
+          public boolean isPalindrome(Node head) {
+           
+  
+         Node slow= head;
+         Node fast = head;
+         while(fast != null && fast.next != null)
+         {
+            slow = slow.next;
+            fast = fast.next.next;
+         }
+        
+           
+        
+        Node midNode = slow;
+        //reversing half;
+        Node curr= midNode;
+        Node prev =  null;
+        Node next;
+        while(curr != null)
+        {
+            next= curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        Node right = prev;
+        Node left = head;
+        //step 3 checking 
+        while ( right != null)
+        {
+            if(left.data != right.data )
+            {
+                return false;
+            }
+           left= left.next;
+            right = right.next;
+        }
+        return true;
+      
+        
+    }
         public static void main(String[] args) {
            // LinkList  ll = new LinkList ();
             LinkList ll = new LinkList();
 
             ll.addFirst(2);
             ll.addFirst(1);
-            ll.addLast(3);
-         //   ll.addLast(5);
-            ll.addMid(3,4);
+            ll.addLast(1);
+           ll.addLast(1);
+            ll.addMid(3,2);
       
    
 
@@ -198,12 +242,14 @@ public class LinkList {
       // ll.removelast();
       //  System.out.println("Found at idx : " +ll.recsearch(3));
       //  System.out.println("Found at idx : " +ll.recsearch(12));
-      ll.reverse();
+     // ll.reverse();
        ll.Print();
        //
        //.llllllllllllllllllllllllllllllllll
-       ll.delNthNodeFromEnd(2);
-       ll.Print();
+      // ll.delNthNodeFromEnd(2);
+       //ll.Print();
+       
+       System.out.println(ll.isPalindrome(head));
       
     }
 }
