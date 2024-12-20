@@ -15,6 +15,16 @@ public class multidimArrList {
         mainList.add(list2);
         mainList.add(list3);
         System.out.println(mainList);
+        //printing manually
+        for( int i=0;i<mainList.size();i++){
+            ArrayList<Integer> currlist= new ArrayList<>();
+            currlist=(mainList.get(i));
+            for(int j=0;j<currlist.size();j++){
+                System.out.print(currlist.get(j)+" ");
+            }
+            System.out.println();
+
+        }
 
 
     }
