@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 public class arr{
-    public static int maxElement(ArrayList list){
+    public static int maxElement(ArrayList <Integer> list){
         int max= Integer.MIN_VALUE;
         for(int i=0;i<list.size();i++){
-            if( max < (int)list.get(i)){
-                max= (int) list.get(i);
+            if( max < list.get(i)){
+                max= list.get(i);
             }
         }
         return max;
