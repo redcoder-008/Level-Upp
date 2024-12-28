@@ -1,9 +1,16 @@
+
 import java.util.Stack;
-public class QueueUsing2Stack {
-class Queue{
+import java.util.Queue;
+class NewQueue{
+    
+    
     static Stack<Integer> s1= new Stack<>();
     static Stack<Integer> s2= new Stack<>();
-
+    
+    NewQueue(){
+       s1= new Stack<>();
+       s2= new Stack<>();
+   }
     public static boolean isEmpty(){
         return s1.isEmpty();
     }
@@ -20,7 +27,7 @@ class Queue{
     }
     //remove
     public static int remove(){
-        if(isEmpty()){
+        if(s1.isEmpty()){
             System.out.println("Queue is empty");
             return -1  ;
         }
@@ -28,20 +35,22 @@ class Queue{
     }
     //peek
     public static int peek(){
-        if(isEmpty()){
+        if(s1.isEmpty()){
             System.out.println("Queue is empty");
             return -1;
         }
         return s1.peek();
     }
 }
+public class QueueUsing2Stack {
+
    
     public static void main(String[] args) {
-        Queue q = new Queue();
+        Queue q = new NewQueue();
         q.add(1);
         q.add(2);
         q.add(3);
-        
+
         q.add(4);
     }
     
