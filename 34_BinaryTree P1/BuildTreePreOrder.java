@@ -47,6 +47,7 @@ public class BuildTreePreOrder{
         inOrder(root.right);
     }
 //post order
+
 public static void postOrder(Node root){
     if(root == null){
         return;
@@ -55,7 +56,7 @@ public static void postOrder(Node root){
     postOrder(root.right);
     System.out.print(root.data+" ");
 } 
-//level order
+//level order 4 tree
 public static void levelOrder(Node root){
     if(root==null) return;
     Queue<Node> q = new LinkedList<>();
@@ -81,6 +82,7 @@ public static void levelOrder(Node root){
             q.add(currNode.right);
         }
     }
+
     }
 
 }
@@ -91,5 +93,6 @@ public static void levelOrder(Node root){
         Node root= tree.BuildTree(nodes);
        // System.out.println(root.data);
        levelOrder(root);
+       System.out.println("Making of tree,tree traversal like post order,pre order, in order,level order");
     }
 }
