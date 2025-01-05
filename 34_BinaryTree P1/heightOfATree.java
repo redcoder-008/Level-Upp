@@ -21,6 +21,12 @@ public class heightOfATree {
         return LN+RN+1;
 
     }
+    public static int NodeSum(Node root){
+        if(root == null) return 0;
+        int leftSum= NodeSum(root.left);
+        int rightSum= NodeSum(root.right);
+        return leftSum+rightSum+ root.data;
+    }
     public static void main(String[] args) {
         Node root= new Node(1);
         root.left=new Node(2);
@@ -30,7 +36,7 @@ public class heightOfATree {
        
         root.right.left= new Node(6);
         root.right.right= new Node(7);
-        System.out.println(countNode(root));
+        System.out.println(NodeSum(root));
 
     }
     
