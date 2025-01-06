@@ -36,8 +36,12 @@ public class diameterA1{
        
        root.right.left= new Node(6);
         root.right.right= new Node(6);
+        Node subTree = new Node(2);
+        subTree.right= new Node(4);
+        subTree.left= new Node(5);
        int ans= diameter(root);
        System.out.println(ans);
+       System.out.println();
         
         
     }
