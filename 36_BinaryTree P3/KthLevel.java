@@ -32,7 +32,7 @@ public static void kthlevell(Node root,int level,int k){
        
        root.right.left= new Node(6);
         root.right.right= new Node(7);
-        kthlevell(root, 1, 3);
+        kthlevell(root, 1, 2);
         
     }
 }
