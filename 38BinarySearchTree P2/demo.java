@@ -1,4 +1,6 @@
 public class demo {
-    sun.invoke.util
+    sun.invoke.
+    sout
+    sout
     
 }
