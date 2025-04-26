@@ -47,16 +47,25 @@ public class Merge2BST {
             finalarr.add(arr2.get(j));
             j++;
         }
+     return   createBST(finalarr, 0, finalarr.size()-1);
 
     }
-    public static Node createBST(Node node,ArrayList<Integer>finalarr,int st,int end){
+    public static Node createBST(ArrayList<Integer>finalarr,int st,int end){
+        if(st>end) return null;
         int mid= (st+end)/2;
-        Node root= New Node(finalarr.get(mid));
-        createBST(node.left, finalarr, st, mid-1);
-        createBST(node.left, finalarr, mid+1, end);
-        
+        Node root= new Node(finalarr.get(mid));
+        root.left= createBST(finalarr, st, mid-1);
+        root.right=createBST(finalarr, mid+1, end);
+        return root;
 
 
+
+    }
+    public static void preorder(Node root){
+        if(root==null) return;
+        System.out.print(root.data+" ");
+        preorder(root.left);
+        preorder(root.right);
     }
 
     public static void main(String[] args) {
@@ -66,8 +75,9 @@ public class Merge2BST {
         Node root2 = new Node(9);
         root2.left = new Node(3);
         root2.right = new Node(12);
-        merge(root1, root2);
-        System.out.println(Array.get(1));
+       Node root= merge(root1, root2);
+        preorder(root);
+        
     }
 
 }
