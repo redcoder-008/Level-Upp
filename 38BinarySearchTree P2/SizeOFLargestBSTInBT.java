@@ -9,7 +9,7 @@ public class SizeOFLargestBSTInBT {
             this.isBst = isBst;
             this.min = min;
             this.max = max;
-            this.size =size;
+            this.size = size;
         }
     }
 
@@ -29,7 +29,7 @@ public class SizeOFLargestBSTInBT {
     public static Info largestBSt(Node root) {
         if (root == null) {
             return new Info(true, 0, Integer.MAX_VALUE, Integer.MIN_VALUE);
-                         }
+        }
         Info leftInfo = largestBSt(root.left);
         Info rightInfo = largestBSt(root.right);
         int size = leftInfo.size + rightInfo.size + 1;
@@ -42,17 +42,19 @@ public class SizeOFLargestBSTInBT {
         if (leftInfo.isBst && rightInfo.isBst) {
             maxBST = Math.max(maxBST, size);
             return new Info(true, size, min, max);
-            
+
         }
         return new Info(false, size, min, max);
 
     }
-    public static void inorder(Node root){
-        if(root==null) return;
+
+    public static void inorder(Node root) {
+        if (root == null)
+            return;
         inorder(root.left);
-        System.out.print(root.data+" ");
+        System.out.print(root.data + " ");
         inorder(root.right);
-        
+
     }
 
     public static void main(String[] args) {
@@ -68,7 +70,7 @@ public class SizeOFLargestBSTInBT {
         inorder(root);
         System.out.println();
         Info info = largestBSt(root);
-        System.out.println("The size of the largest BST in BT is "+ maxBST);
+        System.out.println("The size of the largest BST in BT is " + maxBST);
         System.out.println(maxBST);
 
     }
