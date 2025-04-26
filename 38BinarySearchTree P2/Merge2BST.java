@@ -49,6 +49,15 @@ public class Merge2BST {
         }
 
     }
+    public static Node createBST(Node node,ArrayList<Integer>finalarr,int st,int end){
+        int mid= (st+end)/2;
+        Node root= New Node(finalarr.get(mid));
+        createBST(node.left, finalarr, st, mid-1);
+        createBST(node.left, finalarr, mid+1, end);
+        
+
+
+    }
 
     public static void main(String[] args) {
         Node root1 = new Node(2);
