@@ -22,7 +22,17 @@ public class SizeOFLargestBSTInBT {
         Info leftInfo = largestBSt(root.left);
         Info rightInfo = largestBSt(root.right);
         int size = leftInfo.size + rightInfo.size + 1;
-        
+        int min = Math.min(root.data, Math.min(leftInfo.min, rightInfo.min));
+        int max = Math.max(root.data, Math.max(leftInfo.max, rightInfo.max));
+        if (root.data <= leftInfo.max || root.data >= rightInfo.min) {
+            return new Info(false, size, min, max);
+
+        }
+        if (leftInfo.isBst && rightInfo.isBst) {
+            maxBST = Math.max(maxBST, size);
+            new Info(true, size, min, max);
+
+        }
 
     }
 }
